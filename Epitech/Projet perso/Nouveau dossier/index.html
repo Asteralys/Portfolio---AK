@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arthur Kandybowicz - Architecte Systèmes d'Information</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="spotlight"></div>
+
+    <header>
+        <div class="logo">{<span class="logo-accent">A</span>K}</div>
+        <nav>
+            <ul>
+                <li><a href="#profil">Profil</a></li>
+                <li><a href="#parcours">Parcours</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="profil">
+            <h1>Arthur Kandybowicz</h1>
+            <h2 class="typewriter-container"><span class="typewriter"></span></h2> <br>
+            <div class="badge">Recherche d'un contrat d'apprentissage de 33 mois ● Démarrage 29 Déc. 2025</div>
+            <p class="intro">
+                De la gestion des écosystèmes naturels aux écosystèmes numériques. 
+                <br>Je souhaite concevoir des outils éco-responsables et utiles pour <br> <strong>réduire l'empreinte écologique du numérique.</strong>
+            </p>
+        </section>
+
+        <section id="parcours">
+            <h2>Parcours</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>2025 - 2028 : Epitech Nice - Master Architecte Systèmes d'Information</h3>
+                        <p>Spécialisations visées : IoT, Big Data, Cloud & Cybersécurité. Acquisition d'une expertise technique transverse pour concevoir des systèmes complexes.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>2023 - 2024 : BTSA Gestion & Protection de la Nature</h3>
+                        <p>Acquisition de la rigueur scientifique et de la gestion de projet en milieu naturel.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>2022 : Remise à niveau Scientifique</h3>
+                        <p>Consolidation des bases en mathématiques, physique et biologie.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>2019 : BTS Tourisme</h3>
+                        <p>Interrompu par le Covid. Initiation au GDS Amadeus.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projets" id="projets">
+            <h2>Projets</h2>
+            <a href="https://github.com/Asteralys" class="button github-main-button" target="_blank">Voir mes projets sur GitHub</a>
+            <div class="project-grid">
+                <div class="card">
+                    <h3>Eco-Sentinel (IoT) <span class="badge dev">🚧 En développement</span></h3>
+                    <p>Dashboard Kuzzle/Synox pour le monitoring environnemental.</p>
+                    <div class="technos"><span>Python</span><span>API</span><span>Data</span></div>
+                </div>
+                <div class="card">
+                    <h3>Carbon-CLI (Green IT) <span class="badge dev">🚧 En cours</span></h3>
+                    <p>Outil en ligne de commande pour auditer l'empreinte carbone d'une page web.</p>
+                    <div class="technos"><span>Python</span><span>Scripting</span></div>
+                </div>
+                <div class="card">
+                    <h3>Portfolio V1 (Web) <span class="badge online">✅ En ligne</span></h3>
+                    <p>Site statique éco-conçu. Optimisation radicale (Vanilla JS, &lt;150kb).</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="competences" id="competences">
+            <h2>Compétences</h2>
+            <div class="skills-grid">
+                <div class="skill-category"><h3>Backend</h3><ul><li>Java</li><li>Python</li><li>SQL</li></ul></div>
+                <div class="skill-category"><h3>Frontend</h3><ul><li>HTML</li><li>CSS</li><li>JavaScript</li><li><strong>Objectif:</strong> Angular</li></ul></div>
+                <div class="skill-category"><h3>IoT & Ambitions</h3><ul><li>Kuzzle</li><li>Synox</li></ul></div>
+                <div class="skill-category"><h3>Approche & Éthique</h3><ul><li>Éco-conception</li><li>Utilité sociale</li><li>Accessibilité</li></ul></div>
+            </div>
+            <div class="centered-button-container">
+                <a href="assets/CV_Arthur_KANDYBOWICZ-online.pdf" class="button" download>Télécharger mon CV (.pdf)</a>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <h2>Contact</h2>
+            <p class="contact-intro">Une question ? Une proposition ? Retrouvez-moi sur les réseaux ou écrivez-moi.</p>
+            <div class="social-buttons">
+                <a href="https://www.linkedin.com/in/arthur-kandybowicz" class="social-button linkedin" target="_blank">LinkedIn</a>
+            </div>
+            <form id="contact-form" action="https://formspree.io/f/myzvagnw" method="POST">
+                <input type="text" name="name" placeholder="Nom / Entreprise" required>
+                <input type="email" name="email" placeholder="Votre email" required>
+                <input type="text" name="subject" placeholder="Objet" required>
+                <textarea name="message" placeholder="Votre message" required></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+            <p id="form-status"></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>©Développé par Arthur Kandybowicz. Assisté par IA pour l'optimisation & la sobriété numérique. © 2025</p>
+        </div>
+    </footer>
+    
+    <a href="#" class="back-to-top" aria-label="Retour en haut">↑</a>
+
+    <script src="script.js"></script>
+</body>
+</html>
