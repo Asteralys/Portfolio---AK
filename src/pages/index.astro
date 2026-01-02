@@ -6,337 +6,347 @@ const t = content.fr;
 ---
 
 <MainLayout title="Arthur K. | Architecte SI en Alternance">
-	<section
-		id="profil"
-		class="min-h-[90vh] flex flex-col justify-center pt-20"
-	>
-		<div
-			class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/10 border border-green-500/30 w-fit mb-8 hover:bg-green-500/20 transition-colors cursor-default"
-		>
-			<span class="relative flex h-3 w-3">
-				<span
-					class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"
-				></span>
-				<span
-					class="relative inline-flex rounded-full h-3 w-3 bg-green-500"
-				></span>
-			</span>
-			<span
-				class="text-green-400 text-xs md:text-sm font-mono font-bold tracking-wide uppercase"
-				>{t.hero.badge}</span
-			>
-		</div>
-
-		<h1
-			class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight font-mono"
-		>
-			{t.hero.title}<br />
-			<span
-				class="text-transparent bg-clip-text bg-linear-to-r from-green-400 to-cyan-400"
-			>
-				{t.hero.subtitle}
-			</span>
-		</h1>
-
-		<p
-			class="text-lg md:text-xl text-slate-300 max-w-3xl leading-relaxed mb-10 border-l-4 border-cyan-500/50 pl-6 bg-linear-to-r from-cyan-500/5 to-transparent py-4 rounded-r-lg"
-		>
-			{t.hero.desc}
-		</p>
-
-		<div class="flex flex-col sm:flex-row gap-4">
-			<a
-				href="#projets"
-				class="bg-linear-to-r from-green-500 to-cyan-500 text-[#0a0f1c] px-8 py-4 rounded font-bold hover:shadow-[0_0_20px_rgba(56,189,248,0.3)] transition-all text-center"
-			>
-				{t.hero.cta_projects}
-			</a>
-			<a
-				href="..//assets/CV_Arthur_KANDYBOWICZ.pdf"
-				target="_blank"
-				class="flex items-center justify-center gap-2 border border-slate-600 text-slate-300 px-8 py-4 rounded font-bold hover:border-white hover:text-white transition-all bg-[#111a2d]"
-			>
-				<span class="text-lg">📄</span>
-				{t.hero.cta_cv}
-			</a>
-		</div>
-	</section>
-
-	<section id="parcours" class="mb-32 scroll-mt-20">
-		<div
-			class="flex items-end justify-between mb-12 border-b border-slate-800 pb-4"
-		>
-			<h2 class="text-3xl font-bold text-white">Parcours</h2>
-			<span class="font-mono text-slate-600">01 / HISTORY</span>
-		</div>
-
-		<div
-			class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-linear-to-b before:from-transparent before:via-slate-700 before:to-transparent"
-		>
-			{
-				t.timeline.map((item) => (
-					<div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
-						<div class="flex items-center justify-center w-10 h-10 rounded-full border border-slate-700 bg-[#0a0f1c] group-hover:border-cyan-400 shadow z-10 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 transition-colors">
-							<div class="w-2 h-2 rounded-full bg-slate-500 group-hover:bg-cyan-400" />
-						</div>
-						<div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded border border-slate-800 bg-[#111a2d] hover:border-slate-600 transition-colors">
-							<div class="flex flex-col md:flex-row justify-between md:items-center mb-2">
-								<span class="font-bold text-white text-lg">
-									{item.title}
-								</span>
-								<span class="font-mono text-xs text-cyan-400 border border-cyan-400/20 px-2 py-0.5 rounded w-fit mt-1 md:mt-0">
-									{item.year}
-								</span>
-							</div>
-							<div class="text-sm font-mono text-slate-500 mb-3">
-								{item.place}
-							</div>
-							<p class="text-slate-400 text-sm leading-relaxed">
-								{item.desc}
-							</p>
-						</div>
-					</div>
-				))
-			}
-		</div>
-	</section>
-
-	<section id="competences" class="mb-32 scroll-mt-20">
-		<div
-			class="flex items-end justify-between mb-12 border-b border-slate-800 pb-4"
-		>
-			<h2 class="text-3xl font-bold text-white">Compétences</h2>
-			<span class="font-mono text-slate-600">02 / ARSENAL</span>
-		</div>
-		<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-			<div
-				class="bg-[#111a2d] p-6 rounded border border-slate-800 hover:border-cyan-500/30 transition-colors"
-			>
-				<h3
-					class="font-mono text-cyan-400 mb-4 border-b border-slate-700 pb-2"
-				>
-					Architecture & Back
-				</h3>
-				<div class="flex flex-wrap gap-2">
-					{
-						t.skills.stack.map((s) => (
-							<span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs font-mono rounded border border-slate-700">
-								{s}
-							</span>
-						))
-					}
-				</div>
-			</div>
-			<div
-				class="bg-[#111a2d] p-6 rounded border border-slate-800 hover:border-green-500/30 transition-colors"
-			>
-				<h3
-					class="font-mono text-green-400 mb-4 border-b border-slate-700 pb-2"
-				>
-					Web & Green IT
-				</h3>
-				<div class="flex flex-wrap gap-2">
-					{
-						t.skills.web.map((s) => (
-							<span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs font-mono rounded border border-slate-700">
-								{s}
-							</span>
-						))
-					}
-				</div>
-			</div>
-			<div
-				class="bg-[#111a2d] p-6 rounded border border-slate-800 hover:border-slate-500/30 transition-colors"
-			>
-				<h3
-					class="font-mono text-slate-400 mb-4 border-b border-slate-700 pb-2"
-				>
-					Outils & Méthodes
-				</h3>
-				<div class="flex flex-wrap gap-2">
-					{
-						t.skills.tools.map((s) => (
-							<span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs font-mono rounded border border-slate-700">
-								{s}
-							</span>
-						))
-					}
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section id="projets" class="mb-32 scroll-mt-20">
-    <div class="flex items-end justify-between mb-12 border-b border-slate-800 pb-4">
-       <h2 class="text-3xl font-bold text-white">Projets en Conception</h2>
-       <span class="font-mono text-slate-600">03 / BUILD</span>
-    </div>
-    
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      {t.projects.map((p) => (
-        /* On utilise <a> au lieu de <article> et on ajoute target="_blank" */
-        <a 
-          href={p.url} 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          class={`flex flex-col p-6 rounded-xl border bg-[#111a2d] hover:-translate-y-2 hover:shadow-lg transition-all duration-300 ${p.color} border-opacity-30 group cursor-pointer relative`}
+    <section
+        id="profil"
+        class="min-h-[90vh] flex flex-col justify-center pt-20"
+    >
+        <div
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/10 border border-green-500/30 w-fit mb-8 hover:bg-green-500/20 transition-colors cursor-default"
         >
-          <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity text-slate-400">
-            ↗
-          </div>
+            <span class="relative flex h-3 w-3">
+                <span
+                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"
+                ></span>
+                <span
+                    class="relative inline-flex rounded-full h-3 w-3 bg-green-500"
+                ></span>
+            </span>
+            <span
+                class="text-green-400 text-xs md:text-sm font-mono font-bold tracking-wide uppercase"
+            >
+                {t.hero.badge}
+            </span>
+        </div>
 
-          <div class="flex justify-between items-start mb-4 pr-6">
-             <span class="text-xs font-mono text-slate-500 uppercase tracking-widest">{p.type}</span>
-             <span class={`text-[10px] px-2 py-0.5 rounded border ${p.status === 'Prototype' ? 'border-cyan-500 text-cyan-500' : 'border-slate-500 text-slate-500'}`}>
-                {p.status}
-             </span>
-          </div>
-          
-          <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors flex items-center gap-2">
-            {p.name}
-          </h3>
-          
-          <p class="text-sm text-slate-400 mb-6 flex-1">{p.desc}</p>
-          
-          <div class="flex gap-2 flex-wrap mt-auto pt-4 border-t border-slate-800">
-            {p.tags.map(tag => (
-              <span class="text-[10px] font-mono px-2 py-1 bg-slate-900 rounded text-slate-400 border border-slate-800 group-hover:border-slate-700 transition-colors">
-                {tag}
-              </span>
-            ))}
-          </div>
-        </a>
-      ))}
-    </div>
-  </section>
+        <h1
+            class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight font-mono"
+        >
+            {t.hero.title}<br />
+            <span
+                class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-cyan-400"
+            >
+                {t.hero.subtitle}
+            </span>
+        </h1>
 
-	<section id="alternance" class="mb-32">
-		<div
-			class="bg-linear-to-br from-[#111a2d] to-[#0d1321] border border-slate-700 rounded-2xl p-8 md:p-12 text-center relative overflow-hidden group"
-		>
-			<div
-				class="absolute top-0 right-0 w-64 h-64 bg-green-500/5 rounded-full blur-3xl z-0 group-hover:bg-green-500/10 transition-all"
-			>
-			</div>
+        <p
+            class="text-lg md:text-xl text-slate-300 max-w-3xl leading-relaxed mb-10 border-l-4 border-cyan-500/50 pl-6 bg-gradient-to-r from-cyan-500/5 to-transparent py-4 rounded-r-lg"
+        >
+            {t.hero.desc}
+        </p>
 
-			<h3 class="text-3xl font-bold text-white mb-2 relative z-10">
-				{t.recruiter.title}
-			</h3>
-			<p class="text-slate-400 mb-8 font-mono text-sm relative z-10">
-				{t.recruiter.subtitle}
-			</p>
+        <div class="flex flex-col sm:flex-row gap-4">
+            <a
+                href="#projets"
+                class="bg-gradient-to-r from-green-500 to-cyan-500 text-[#0a0f1c] px-8 py-4 rounded font-bold hover:shadow-[0_0_20px_rgba(56,189,248,0.3)] transition-all text-center"
+            >
+                {t.hero.cta_projects}
+            </a>
+            <a
+                href="/assets/CV_Arthur_KANDYBOWICZ.pdf"
+                target="_blank"
+                class="flex items-center justify-center gap-2 border border-slate-600 text-slate-300 px-8 py-4 rounded font-bold hover:border-white hover:text-white transition-all bg-[#111a2d]"
+            >
+                <span class="text-lg">📄</span>
+                {t.hero.cta_cv}
+            </a>
+        </div>
+    </section>
 
-			<div
-				class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10 relative z-10 max-w-4xl mx-auto"
-			>
-				{
-					t.recruiter.rhythm.map((r) => (
-						<div class="bg-[#0a0f1c] border border-slate-800 p-4 rounded-lg hover:border-green-500/50 transition-colors">
-							<div class="text-green-400 font-bold font-mono mb-1">
-								{r.year}
-							</div>
-							<div class="text-slate-400 text-sm">{r.detail}</div>
-						</div>
-					))
-				}
-			</div>
+    <section id="parcours" class="mb-32 scroll-mt-20">
+        <div
+            class="flex items-end justify-between mb-12 border-b border-slate-800 pb-4"
+        >
+            <h2 class="text-3xl font-bold text-white">Parcours</h2>
+            <span class="font-mono text-slate-600">01 / HISTORY</span>
+        </div>
 
-			<div
-				class="bg-[#0a0f1c]/50 border border-slate-800/50 rounded-xl p-6 relative z-10 max-w-2xl mx-auto"
-			>
-				<p
-					class="text-xs font-mono text-slate-500 uppercase tracking-widest mb-4"
-				>
-					Documents Administratifs
-				</p>
-				<div class="flex flex-col sm:flex-row justify-center gap-4">
-					<a
-						href="/assets/Calendrier_Promo2028.pdf"
-						download
-						class="flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-white px-6 py-3 rounded font-bold transition-all text-sm w-full"
-					>
-						📅 {t.recruiter.calendar_btn}
-					</a>
-					<a
-						href="/assets/CV_Arthur_KANDYBOWICZ.pdf"
-						download
-						class="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 text-white px-6 py-3 rounded font-bold transition-all text-sm w-full"
-					>
-						📄 {t.recruiter.cv_btn}
-					</a>
-				</div>
-			</div>
+        <div
+            class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-700 before:to-transparent"
+        >
+            {
+                t.timeline.map((item) => (
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full border border-slate-700 bg-[#0a0f1c] group-hover:border-cyan-400 shadow z-10 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 transition-colors">
+                            <div class="w-2 h-2 rounded-full bg-slate-500 group-hover:bg-cyan-400" />
+                        </div>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded border border-slate-800 bg-[#111a2d] hover:border-slate-600 transition-colors">
+                            <div class="flex flex-col md:flex-row justify-between md:items-center mb-2">
+                                <span class="font-bold text-white text-lg">
+                                    {item.title}
+                                </span>
+                                <span class="font-mono text-xs text-cyan-400 border border-cyan-400/20 px-2 py-0.5 rounded w-fit mt-1 md:mt-0">
+                                    {item.year}
+                                </span>
+                            </div>
+                            <div class="text-sm font-mono text-slate-500 mb-3">
+                                {item.place}
+                            </div>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                {item.desc}
+                            </p>
+                        </div>
+                    </div>
+                ))
+            }
+        </div>
+    </section>
 
-			<div class="mt-8 text-sm text-slate-400 relative z-10">
-				📍 Mobilité : <span class="text-white"
-					>{t.recruiter.mobility}</span
-				>
-			</div>
-		</div>
-	</section>
+    <section id="competences" class="mb-32 scroll-mt-20">
+        <div
+            class="flex items-end justify-between mb-12 border-b border-slate-800 pb-4"
+        >
+            <h2 class="text-3xl font-bold text-white">Compétences</h2>
+            <span class="font-mono text-slate-600">02 / ARSENAL</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div
+                class="bg-[#111a2d] p-6 rounded border border-slate-800 hover:border-cyan-500/30 transition-colors"
+            >
+                <h3
+                    class="font-mono text-cyan-400 mb-4 border-b border-slate-700 pb-2"
+                >
+                    Architecture & Back
+                </h3>
+                <div class="flex flex-wrap gap-2">
+                    {
+                        t.skills.stack.map((s) => (
+                            <span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs font-mono rounded border border-slate-700">
+                                {s}
+                            </span>
+                        ))
+                    }
+                </div>
+            </div>
+            <div
+                class="bg-[#111a2d] p-6 rounded border border-slate-800 hover:border-green-500/30 transition-colors"
+            >
+                <h3
+                    class="font-mono text-green-400 mb-4 border-b border-slate-700 pb-2"
+                >
+                    Web & Green IT
+                </h3>
+                <div class="flex flex-wrap gap-2">
+                    {
+                        t.skills.web.map((s) => (
+                            <span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs font-mono rounded border border-slate-700">
+                                {s}
+                            </span>
+                        ))
+                    }
+                </div>
+            </div>
+            <div
+                class="bg-[#111a2d] p-6 rounded border border-slate-800 hover:border-slate-500/30 transition-colors"
+            >
+                <h3
+                    class="font-mono text-slate-400 mb-4 border-b border-slate-700 pb-2"
+                >
+                    Outils & Méthodes
+                </h3>
+                <div class="flex flex-wrap gap-2">
+                    {
+                        t.skills.tools.map((s) => (
+                            <span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs font-mono rounded border border-slate-700">
+                                {s}
+                            </span>
+                        ))
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<section id="contact" class="py-20 max-w-2xl mx-auto">
-		<h2 class="text-4xl font-bold text-white mb-2 text-center">Contact</h2>
-		<p class="text-slate-400 text-center mb-10">
-			Intéressé par mon profil ? Discutons de vos projets.
-		</p>
+    <section id="projets" class="mb-32 scroll-mt-20">
+        <div
+            class="flex items-end justify-between mb-12 border-b border-slate-800 pb-4"
+        >
+            <h2 class="text-3xl font-bold text-white">Projets en Conception</h2>
+            <span class="font-mono text-slate-600">03 / BUILD</span>
+        </div>
 
-		<form
-			action="https://formspree.io/f/myzvagnw"
-			method="POST"
-			class="space-y-4"
-		>
-			<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-				<div class="space-y-1">
-					<label
-						for="name"
-						class="text-xs font-mono text-slate-500 ml-1"
-						>IDENTITÉ</label
-					>
-					<input
-						type="text"
-						name="name"
-						required
-						placeholder="Nom / Entreprise"
-						class="w-full bg-[#111a2d] border border-slate-700 rounded p-3 text-white focus:border-cyan-400 focus:outline-none transition-colors"
-					/>
-				</div>
-				<div class="space-y-1">
-					<label
-						for="email"
-						class="text-xs font-mono text-slate-500 ml-1"
-						>EMAIL</label
-					>
-					<input
-						type="email"
-						name="email"
-						required
-						placeholder="votre@email.com"
-						class="w-full bg-[#111a2d] border border-slate-700 rounded p-3 text-white focus:border-cyan-400 focus:outline-none transition-colors"
-					/>
-				</div>
-			</div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {
+                t.projects.map((p) => (
+                    <a
+                        href={p.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class={`flex flex-col p-6 rounded-xl border bg-[#111a2d] hover:-translate-y-2 hover:shadow-lg transition-all duration-300 ${p.color} border-opacity-30 group cursor-pointer relative`}
+                    >
+                        <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity text-slate-400">
+                            ↗
+                        </div>
 
-			<div class="space-y-1">
-				<label
-					for="message"
-					class="text-xs font-mono text-slate-500 ml-1">MESSAGE</label
-				>
-				<textarea
-					name="message"
-					rows="5"
-					required
-					placeholder="Détails de la mission..."
-					class="w-full bg-[#111a2d] border border-slate-700 rounded p-3 text-white focus:border-cyan-400 focus:outline-none transition-colors"
-				></textarea>
-			</div>
+                        <div class="flex justify-between items-start mb-4 pr-6">
+                            <span class="text-xs font-mono text-slate-500 uppercase tracking-widest">
+                                {p.type}
+                            </span>
+                            <span
+                                class={`text-[10px] px-2 py-0.5 rounded border ${p.status === "Prototype" ? "border-cyan-500 text-cyan-500" : "border-slate-500 text-slate-500"}`}
+                            >
+                                {p.status}
+                            </span>
+                        </div>
 
-			<button
-				type="submit"
-				class="w-full bg-green-500 text-[#0a0f1c] font-bold py-4 rounded hover:bg-white transition-colors uppercase tracking-widest text-sm"
-			>
-				Transmettre le message
-			</button>
-		</form>
-	</section>
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors flex items-center gap-2">
+                            {p.name}
+                        </h3>
+
+                        <p class="text-sm text-slate-400 mb-6 flex-1">
+                            {p.desc}
+                        </p>
+
+                        <div class="flex gap-2 flex-wrap mt-auto pt-4 border-t border-slate-800">
+                            {p.tags.map((tag) => (
+                                <span class="text-[10px] font-mono px-2 py-1 bg-slate-900 rounded text-slate-400 border border-slate-800 group-hover:border-slate-700 transition-colors">
+                                    {tag}
+                                </span>
+                            ))}
+                        </div>
+                    </a>
+                ))
+            }
+        </div>
+    </section>
+
+    <section id="alternance" class="mb-32">
+        <div
+            class="bg-gradient-to-br from-[#111a2d] to-[#0d1321] border border-slate-700 rounded-2xl p-8 md:p-12 text-center relative overflow-hidden group"
+        >
+            <div
+                class="absolute top-0 right-0 w-64 h-64 bg-green-500/5 rounded-full blur-3xl z-0 group-hover:bg-green-500/10 transition-all"
+            >
+            </div>
+
+            <h3 class="text-3xl font-bold text-white mb-2 relative z-10">
+                {t.recruiter.title}
+            </h3>
+            <p class="text-slate-400 mb-8 font-mono text-sm relative z-10">
+                {t.recruiter.subtitle}
+            </p>
+
+            <div
+                class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10 relative z-10 max-w-4xl mx-auto"
+            >
+                {
+                    t.recruiter.rhythm.map((r) => (
+                        <div class="bg-[#0a0f1c] border border-slate-800 p-4 rounded-lg hover:border-green-500/50 transition-colors">
+                            <div class="text-green-400 font-bold font-mono mb-1">
+                                {r.year}
+                            </div>
+                            <div class="text-slate-400 text-sm">{r.detail}</div>
+                        </div>
+                    ))
+                }
+            </div>
+
+            <div
+                class="bg-[#0a0f1c]/50 border border-slate-800/50 rounded-xl p-6 relative z-10 max-w-2xl mx-auto"
+            >
+                <p
+                    class="text-xs font-mono text-slate-500 uppercase tracking-widest mb-4"
+                >
+                    Documents Administratifs
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a
+                        href="/assets/Calendrier_Promo2028.pdf"
+                        download
+                        class="flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-white px-6 py-3 rounded font-bold transition-all text-sm w-full"
+                    >
+                        📅 {t.recruiter.calendar_btn}
+                    </a>
+                    <a
+                        href="/assets/CV_Arthur_KANDYBOWICZ.pdf"
+                        download
+                        class="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 text-white px-6 py-3 rounded font-bold transition-all text-sm w-full"
+                    >
+                        📄 {t.recruiter.cv_btn}
+                    </a>
+                </div>
+            </div>
+
+            <div class="mt-8 text-sm text-slate-400 relative z-10">
+                📍 Mobilité : <span class="text-white">
+                    {t.recruiter.mobility}
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 max-w-2xl mx-auto">
+        <h2 class="text-4xl font-bold text-white mb-2 text-center">Contact</h2>
+        <p class="text-slate-400 text-center mb-10">
+            Intéressé par mon profil ? Discutons de vos projets.
+        </p>
+
+        <form
+            action="https://formspree.io/f/myzvagnw"
+            method="POST"
+            class="space-y-4"
+        >
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="space-y-1">
+                    <label
+                        for="name"
+                        class="text-xs font-mono text-slate-500 ml-1"
+                        >IDENTITÉ</label
+                    >
+                    <input
+                        type="text"
+                        name="name"
+                        required
+                        placeholder="Nom / Entreprise"
+                        class="w-full bg-[#111a2d] border border-slate-700 rounded p-3 text-white focus:border-cyan-400 focus:outline-none transition-colors"
+                    />
+                </div>
+                <div class="space-y-1">
+                    <label
+                        for="email"
+                        class="text-xs font-mono text-slate-500 ml-1"
+                        >EMAIL</label
+                    >
+                    <input
+                        type="email"
+                        name="email"
+                        required
+                        placeholder="votre@email.com"
+                        class="w-full bg-[#111a2d] border border-slate-700 rounded p-3 text-white focus:border-cyan-400 focus:outline-none transition-colors"
+                    />
+                </div>
+            </div>
+
+            <div class="space-y-1">
+                <label
+                    for="message"
+                    class="text-xs font-mono text-slate-500 ml-1">MESSAGE</label
+                >
+                <textarea
+                    name="message"
+                    rows="5"
+                    required
+                    placeholder="Détails de la mission..."
+                    class="w-full bg-[#111a2d] border border-slate-700 rounded p-3 text-white focus:border-cyan-400 focus:outline-none transition-colors"
+                ></textarea>
+            </div>
+
+            <button
+                type="submit"
+                class="w-full bg-green-500 text-[#0a0f1c] font-bold py-4 rounded hover:bg-white transition-colors uppercase tracking-widest text-sm"
+            >
+                Transmettre le message
+            </button>
+        </form>
+    </section>
 </MainLayout>
