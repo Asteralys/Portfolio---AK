@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+:root {
+    --bg-depth: #0a0f1c;
+    --bg-surface: #111a2d;
+    --color-green: #4ade80;
+    --color-blue: #38bdf8;
+}
+
+@keyframes pulse-glow {
+
+    0%,
+    100% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+}
+
+html {
+    background-color: var(--bg-depth);
+    scroll-behavior: smooth;
+}
+
+/* Scrollbar Custom */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-depth);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-blue);
+}
