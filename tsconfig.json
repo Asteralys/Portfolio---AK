@@ -1,5 +1,16 @@
 {
-  "extends": "astro/tsconfigs/strict",
-  "include": [".astro/types.d.ts", "**/*"],
-  "exclude": ["dist"]
+  "compilerOptions": {
+    // ... tes options actuelles ...
+  },
+  "include": [
+    "**/*" 
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    "**/*.spec.ts",
+    "archive_V.1",  
+    "archive*"       
+  ]
 }
