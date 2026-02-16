@@ -3,6 +3,8 @@ import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   integrations: [tailwind()],
-  site: 'https://Asteralys.github.io', 
-  base: '/Portfolio---AK', 
+  
+  site: 'https://Asteralys.github.io',
+  base: '/Portfolio---AK',
+  
 });

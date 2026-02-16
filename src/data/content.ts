@@ -2,70 +2,94 @@
 
 export const content = {
   fr: {
-   hero: {
-      badge: "Open to Work • Alternance 33 mois • Janv. 2026",
-      title: "Apprenti Architecte",
-      subtitle: "Systèmes d'Information.",
-      // VERSION 3 : Curiosité technique & Passage "de l'autre côté du miroir"
-      desc: "Sur le terrain, j'étais utilisateur de solutions numériques pour le suivi de la biodiversité. Aujourd'hui, ma curiosité me pousse à passer de l'autre côté : comprendre comment ces systèmes sont architecturés. Je développe mes propres outils (bases de données, cartes, API) non pas pour réinventer la roue, mais pour maîtriser techniquement le flux de la donnée, de la saisie terrain jusqu'à son exploitation.",
-      cta_projects: "Voir mes prototypes",
-      cta_cv: "CV (.pdf)"
+    hero: {
+      badge: "Alternance 32 mois • Février 2026",
+      title: "SOFTWARE & IOT",
+      subtitle: "SOLUTIONS ENGINEER",
+      desc: "Étudiant en Master d'Architecture SI.  Issu de la gestion de la biodiversité, ma reconversion est guidée par une quête de sens: **concevoir un numérique utile et durable**. Mon objectif : allier performance technique (IoT, Cloud) et responsabilité écologique.",
+      cta_projects: "Voir mes réalisations",
+      cta_cv: "Consulter mon CV"
     },
     timeline: [
-      { year: '2025 - 2028', title: 'Master Architecte SI', place: 'Epitech Nice', desc: 'spécialisation souhaitée :  Data, Cloud, DevOps ou IoT ' },
-      { year: '2023 - 2024', title: 'BTSA GPN', place: 'Gestion & Protection de la Nature', desc: 'Rigueur scientifique : Protocoles d\'inventaire et analyse de données terrain.' },
-      { year: '2022', title: 'Remise à niveau Scientifique', place: 'Autodidacte', desc: 'Logique mathématique, algorithmique et biologie.' },
-      { year: '2019', title: 'BTS Tourisme', place: 'Nice', desc: 'Gestion de flux et outils numériques professionnels (GDS).' },
-      { year: '2017', title: 'Bac Pro S.E.N', place: 'Systèmes Numériques', desc: 'Bases hardware, électronique embarquée et logique binaire.' }
+      { 
+        year: '2025 - 2028', 
+        title: 'Master Architecte SI', 
+        place: 'Epitech (MSc) - Nice', 
+        desc: 'Spécialisation : IoT, Big Data, Cloud et IA. Pédagogie par projets intensifs (Piscine, Rushs).' 
+      },
+      { 
+        year: '2023-2024', 
+        title: 'BTSA GPN', 
+        place: 'CFPPA Valabre', 
+        desc: 'Gestion & Protection de la Nature. Expertise en analyse d\'écosystèmes complexes et approche systémique.' 
+      },
+      { 
+        year: '2019', 
+        title: 'BTS Tourisme', 
+        place: 'Vichy', 
+        desc: 'Spécialisation Éco-tourisme & Tourisme Vert. Gestion de projets et valorisation du territoire.' 
+      },
+      { 
+        year: '2017', 
+        title: 'Bac Pro S.E.N', 
+        place: 'EME - Marseille', 
+        desc: 'Fondations techniques : Hardware, électronique embarquée et logique binaire.' 
+      }
     ],
     skills: {
-      stack: ['Architecture BDD', 'Node.js / Express', 'SQL / PostgreSQL', 'Python', 'API REST'],
-      web: ['Astro (Green IT)', 'Leaflet (SIG Web)', 'Tailwind CSS', 'JavaScript ES6+'],
-      tools: ['VS Code', 'GitFlow', 'Docker (Notions)', 'Modélisation UML/MCD']
+      stack: ['Java (JavaFX)', 'C / C++', 'Python', 'Node.js', 'SQL / PostgreSQL', 'Angular'],
+      web: ['React.js', 'Astro (Green IT)', 'Tailwind CSS', 'Leaflet (SIG)', 'TypeScript'],
+      tools: ['Docker', 'GitFlow', 'UML / Design Patterns', 'Linux / Bash', 'VS Code']
     },
-   projects: [
-      { 
-        name: 'Compendium-TCG', 
-        type: 'Architecture Full Stack', 
-        tags: ['Supabase', 'Realtime', 'Security'], 
-        desc: 'Plateforme sociale pour joueurs de cartes (TCG). Architecture réactive (changement d\'état temps réel) et gestion sécurisée des données utilisateurs.',
-        status: 'Prototype',
-        url: 'https://github.com/Asteralys',
-        //url: 'https://github.com/Asteralys/Compendium_TCG', // <-- Le lien ici
-        color: 'border-cyan-500/50' 
+    projects: [
+      {
+        name: 'Compendium - TCG',
+        type: 'Fullstack / App',
+        tags: ['React', 'Node.js', 'SQL'], 
+        desc: "Application de gestion de collection de cartes (TCG). Conception d'une architecture complète avec base de données relationnelle pour le tri, le filtrage et la création de decks. Interface utilisateur dynamique.",
+        status: 'En développement',
+        url: '#', // Lien désactivé
+        color: 'border-blue-500/50'
       },
-      { 
-        name: 'Natura-Field', 
-        type: 'Web App / Offline First', 
-        tags: ['PWA', 'GeoJSON', 'SQL'], 
-        desc: 'Outil métier pour naturalistes. Résout la problématique de la saisie de données en zone blanche via une synchro locale/cloud.',
-        status: 'Concept',
-        url: 'https://github.com/Asteralys',
-        //url: 'https://github.com/Asteralys/natura-field', // <-- Le lien ici
-        color: 'border-green-500/50'
+      {
+        name: 'Jeu Roguelike 2D',
+        type: 'Architecture Logicielle',
+        tags: ['Java', 'JavaFX', 'MVC', 'Patterns'],
+        desc: "Conception d'un moteur de jeu avec génération procédurale (Algo Random Walk). Implémentation stricte du pattern MVC et Strategy pour une IA modulaire.",
+        status: 'Académique',
+        url: '#', // Lien désactivé
+        color: 'border-red-500/50'
       },
-      { 
-        name: 'Bio-API', 
-        type: 'Backend / Interopérabilité', 
-        tags: ['Node.js', 'Swagger', 'OpenData'], 
-        desc: 'Conception d\'une API REST standardisée pour l\'échange de données faunistiques. Focus sur la documentation et la structure JSON.',
-        status: 'En réflexion',
-        url: 'https://github.com/Asteralys',
-        //url: 'https://github.com/Asteralys', // <-- Lien général en attendant
-        color: 'border-slate-600'
+      {
+        name: 'Bio-Stat Analyzer',
+        type: 'Data Engineering',
+        tags: ['C++', 'Algorithmique', 'Performance'],
+        desc: "Moteur de traitement de données naturalistes en C++. Outil CLI capable de parser des fichiers CSV massifs et de calculer des indices de biodiversité avec haute performance.",
+        status: 'En cours',
+        url: '#', // Lien déjà désactivé
+        color: 'border-orange-500/50'
+      },
+      {
+        name: 'Smart BatBox',
+        type: 'IoT / Embedded',
+        tags: ['ESP32', 'C', 'Signal Processing'],
+        desc: "Système embarqué d'écoute des chiroptères. Transformation des ultrasons en temps réel et transmission vers une application compagnon (React/Angular).",
+        status: 'Roadmap 2026',
+        url: '#', // Lien déjà désactivé
+        color: 'border-purple-500/50'
       }
     ],
     recruiter: {
-      title: "Prêt pour Janvier 2026",
-      subtitle: "Modalités du contrat d'apprentissage",
-      duration: "33 Mois",
+      title: "Prêt pour Février 2026",
+      subtitle: "Rythme d'alternance",
+      duration: "32 Mois",
       rhythm: [
         { year: "Année 1", detail: "4 sem. Entreprise / 2 sem. École" },
         { year: "Année 2", detail: "6 sem. Entreprise / 2 sem. École" },
         { year: "Année 3", detail: "9 sem. Entreprise / 1 sem. École" }
       ],
-      mobility: "06, 83 , 13 & Télétravail",
-      calendar_btn: "Télécharger le Calendrier d'Alternance",
+      mobility: "PACA (Mobile), 06, 83 & Télétravail",
+      calendar_btn: "Calendrier d'Alternance",
       cv_btn: "Télécharger mon CV"
     }
   }
